@@ -22,8 +22,6 @@ main {
     background-color: aqua;
 }
 
-/*----------------------------------------------------------------------------------------------------------------------*/
-
 h1 {
     font-family: 'VT323', monospace;
     text-transform: capitalize;
@@ -32,6 +30,54 @@ h1 {
     margin-bottom: 0 1rem;
     color: #3a3a3a;
 }
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*nav area--------------------------------------------------------------------------------------------------------------*/
+header{
+    position: fixed;
+    box-shadow: 0 2px 2px #3a3a3a;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+header h1{
+    margin: 10px;
+    top: 0;
+    font-size: 350%;
+}
+
+nav {
+    width: 160px;
+    margin-left: auto;
+    
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    margin-top: auto;
+}
+
+nav>li {
+    padding: 10px;
+    margin: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #3a3a3a;
+    font-family: 'VT323', monospace;
+    font-size: 150%;
+    border-bottom: #3a3a3a 1px solid;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
 
 
 
