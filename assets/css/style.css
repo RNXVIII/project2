@@ -7,8 +7,38 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+}
+
 main {
     /* Make main element take up any surplus space to push footer down it does this by getting the flexbox values from body */
     flex: 1 0 auto;
     margin-top: 47px;
+    background-color: aqua;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+h1 {
+    font-family: 'VT323', monospace;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin-bottom: 0 1rem;
+    color: #3a3a3a;
+}
+
+
+
+
+
+
+footer {
+    height: 20px;
+    background-color: blue;
 }
