@@ -1,0 +1,14 @@
+
+/*override generic styles*/ 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    /* Make main element take up any surplus space to push footer down it does this by getting the flexbox values from body */
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
