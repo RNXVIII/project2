@@ -19,7 +19,6 @@ main {
     /* Make main element take up any surplus space to push footer down it does this by getting the flexbox values from body */
     flex: 1 0 auto;
     margin-top: 47px;
-    background-color: aqua;
 }
 
 h1 {
@@ -78,13 +77,32 @@ nav a{
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
+/*footer area*----------------------------------------------------------------------------------------------------------*/
 
 footer {
     height: 20px;
     background-color: blue;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+/*game area-------------------------------------------------------------------------------------------------------------*/
+
+.game {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 140px;
+    overflow: hidden;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background: url("../images/trex.png");
+    background-size: 50px 50px;
+    overflow: hidden;
+    position: relative;
+    top: 148px;
 }
