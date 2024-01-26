@@ -1,4 +1,5 @@
 const dino = document.getElementById('dino');
+let score = 0;
 
 function jump() {
     if (dino.classList != "jump") {
@@ -10,6 +11,23 @@ function jump() {
     }
 }
 
+function updateScore() {
+    let scoreElement = document.getElementById('score');
+    scoreElement.textContent = `Score: ${score}`;
+}
+
+let isAlive = setInterval(function () {
+    score++;
+    updateScore();
+
+    
+
+}, 100);
+
+
+
+
 document.addEventListener('keydown', function (event) {
     jump();
 });
+
