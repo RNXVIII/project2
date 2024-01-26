@@ -1,7 +1,7 @@
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
 let score = 0;
-let issAlive;
+let scoreHistory = [];
 
 
 // this function makes the character "jump" by adding then remvoing the class jump
@@ -24,45 +24,56 @@ function updateScore() {
 
 
 
-let isAlive = setInterval(function () {
+function restartGame() {
+    // Reset cactus animation and position
+    cactus.style.animationPlayState = "running";
+    cactus.style.left = "580px";
 
-    //how the score updates 
-    score++;
-    updateScore();
+    gameOver = document.getElementById('gameOverOverlay');
+    gameOver.style.display = "none"
+    // Store the current score in the history array
+    scoreHistory.push(score);
 
-    //this is something i learned watching tutorials 
 
-    //this grabs the CSS value "top" and then it turns it into a number rather than pixels, add console.log
-    //to see what values its getting, this is so we can gets its y value
 
-    let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+    // Continue the game
+    isAlive = setInterval(function () {
 
-    // same for this aswell except iit grabs the x value rather than y 
-
-    let cactusLeft = parseInt(
-        window.getComputedStyle(cactus).getPropertyValue("left")
-    );
-
-    // detect collision
-    if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
-        // collision
-        
-        gameOver = document.getElementById('gameOverOverlay');
-        gameOver.style.display = "block";
-
-        // Stop the cactus animation
-        cactus.style.animationPlayState = "paused";
-
-        score = 0;
+        //how the score updates
+        score++;
         updateScore();
 
-    }
-}, 100);
+        //what i learned watching tutorials
 
+        //grabs the "top" value and stores it into a variable essentialy grabing the dinos y value
+        let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+
+        //does the same thing but with the x value
+        let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
+
+        if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
+            // Collision
+            gameOver.style.display = "block";
+
+            // Pause the cactus animation
+            cactus.style.animationPlayState = "paused";
+
+            // Reset the score
+            score = 0;
+            updateScore();
+
+            // Stop the game interval
+            clearInterval(isAlive);
+        }
+    }, 100);
+}
 
 
 // this allows the user to jump by pressing down on any key , will probably add a click function later on for mobile 
 document.addEventListener('keydown', function (event) {
     jump();
 });
+
+// Start the game when the page loads
+restartGame();
 
