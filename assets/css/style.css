@@ -107,7 +107,34 @@ footer {
     top: 148px;
 }
 
+#cactus {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    background: url("../images/cactus.png");
+    background-size: 20px 40px;
+    top: 110px;
+    left: 580px;
+    animation: block 1s infinite linear;
+}
+
 /*learned watching tutorials*/
+
+
+/*this is for the cactus */
+@keyframes block {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}
+
+
+
+/*this is for the playable character*/
 
 .jump {
     animation: jump 0.3s linear;
