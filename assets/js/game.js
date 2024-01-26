@@ -1,7 +1,6 @@
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
 let score = 0;
-let scoreHistory = [];
 
 
 // this function makes the character "jump" by adding then remvoing the class jump
@@ -24,6 +23,8 @@ function updateScore() {
 
 
 
+
+
 function restartGame() {
     // Reset cactus animation and position
     cactus.style.animationPlayState = "running";
@@ -32,7 +33,9 @@ function restartGame() {
     gameOver = document.getElementById('gameOverOverlay');
     gameOver.style.display = "none"
     // Store the current score in the history array
-    scoreHistory.push(score);
+    
+
+
 
 
 
@@ -53,10 +56,18 @@ function restartGame() {
 
         if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
             // Collision
+
+            // Display the final score
+            let finalScoreElement = document.getElementById('finalScore');
+            finalScoreElement.textContent = `Final Score: ${score}`;
+
             gameOver.style.display = "block";
 
             // Pause the cactus animation
             cactus.style.animationPlayState = "paused";
+
+
+
 
             // Reset the score
             score = 0;
