@@ -116,6 +116,10 @@ footer {
     top: 110px;
     left: 580px;
     animation: block 1s infinite linear;
+    animation-delay: 1.5s;
+    /*this is to puase the game once the game is over*/
+    animation-play-state: running;
+
 }
 
 #score {
@@ -172,3 +176,28 @@ footer {
         top: 148px;
     }
 }
+
+/* Game Over overlay ---------------------------------------------------------------------------------------------------*/
+#gameOverOverlay {
+    display: none;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    font-family: 'VT323', monospace;
+    border: solid 1px #3a3a3a;
+    width: 350px;
+    height: 150px;
+}
+
+#restartButton{
+    font-family: 'VT323', monospace;
+    color:#3a3a3a;
+    background-color: #FFFFFF;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
