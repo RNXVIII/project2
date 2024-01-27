@@ -1,6 +1,9 @@
+/*jshint esversion: 6 */
+
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
 let score = 0;
+let isAlive;
 
 
 // this function makes the character "jump" by adding then remvoing the class jump
@@ -30,15 +33,10 @@ function restartGame() {
     cactus.style.animationPlayState = "running";
     cactus.style.left = "580px";
 
-    gameOver = document.getElementById('gameOverOverlay');
-    gameOver.style.display = "none"
+    let gameOver = document.getElementById('gameOverOverlay');
+    gameOver.style.display = "none";
     // Store the current score in the history array
     
-
-
-
-
-
     // Continue the game
     isAlive = setInterval(function () {
 
@@ -53,6 +51,7 @@ function restartGame() {
 
         //does the same thing but with the x value
         let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
+
 
         if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
             // Collision
@@ -80,11 +79,15 @@ function restartGame() {
 }
 
 
-// this allows the user to jump by pressing down on any key , will probably add a click function later on for mobile 
+// this allows the user to jump by pressing down on any key
 document.addEventListener('keydown', function (event) {
     jump();
 });
 
+//this will allow mobile player to play by adding a on "click" function
+document.addEventListener('click', function (event) {
+    jump();
+});
 // Start the game when the page loads
 restartGame();
 
