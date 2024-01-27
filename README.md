@@ -6,6 +6,8 @@ the dino game or the chrome dinosaur game as its widely known is a simple game w
 
 <h2><img src="assets/images/dino-cover.png"></h2>
 
+The live project for it can be found [here](https://rnxviii.github.io/Project2/)
+
 # Features
 
 
@@ -56,9 +58,75 @@ i used notepad to track all my errors that i had to deal with/ stopped my code f
 
 <ul>
 
-<li>external files were not linked properly : i linked them up properly</li>
+<li>external files were not linked properly : i linked them up properly.</li>
 
-<li>had to remake the score system by putting it inside the setInterval function </li>
+<li>had to remake the score system by putting it inside the setInterval function. </li>
 
-<li></li>
+<li>had to figure out a way to make the game over screen apear when needed, scrapped a on screen game over and made it underneath the game screen for a easier solution but also a better one.</li>
+
+<li>had to learn how keyframes work but also to get them moving at a normal pace, simple fix: added infinite under the animation CSS value</li>
+
+# Validators 
+
+This website passed the [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator)
+
+This website also passed the [W3C validator](https://validator.w3.org/)
+
+This website also passed the [JSHint](https://jshint.com/)
+
+This website also got high scores on Lighthouse:
+
+<h2><img src="assets/images/dino-score.png"></h2>
+
+# Bug that arent fixed?
+
+there is a bug in this game that does not affects it directly but i am unsure of the reason why, sometime the user may need to reload the website due to the game showing abnormal behaviours such as the user not being able to die
+
+apart from this loading bug that i have tried fixing by delaying the cactus animation thus giving the website a second to load i have no bugs in this current website.
+
+# Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+<ul>
+<li>In the GitHub repository, navigate to the Settings tab</li>
+
+<li>From the source section drop-down menu, select the Master Branch</li>
+
+<li>Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.</li>
+
+</ul>
+
+The live link for it can be found [here](https://rnxviii.github.io/Project2/)
+
+# Credit 
+
+i spent an awful long time watching tutorials to figure out how to make this game but the most useful things that i found and used were from 
+
+this youtube Video [here](https://www.youtube.com/watch?v=i7nIutSLvdU)
+
+this gave me a good idea of how keyframes worked but he is also where i got the dino and cactus sprite for this game
+
+this youtube video [here](https://www.youtube.com/watch?v=bG2BmmYr9NQ)
+
+along with the first video gave me a good idea on how to create essentially a collision function in javaScript
+
+
+the footer used in this is from the Code Institute Love running project.
+
+the favicon was taken from [This Website](https://www.flaticon.com/free-icon/dinosaur_7203417?term=dinosaur&page=1&position=2&origin=tag&related_id=7203417)
+
+## Libaries and tools used
+
+Font Awesome [icons](https://fontawesome.com/)
+
+helped me learn and create this : [w3schools](https://www.w3schools.com/)
+
+[google-Fonts](https://fonts.google.com/specimen/VT323)
+
+
+
+
+
+
 
