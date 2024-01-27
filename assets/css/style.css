@@ -251,8 +251,8 @@ nav a{
 
 
 
-/* Media query for phones and tablets */
-@media only screen and (max-width: 768px) {
+/* Media query for phones and */
+@media only screen and (min-width: 300px) and (max-width: 800px)  {
     header h1 {
         font-size: 250%;
     }
@@ -315,6 +315,62 @@ nav a{
         margin-left: 20px;
         margin-right: 20px;
     }
-    
-    /*----------------------------------------------------------------------------------------------------------------------*/
 }
+    /*----------------------------------------------------------------------------------------------------------------------*/
+
+        @media only screen and (max-width: 1024px){
+            main h1 {
+                    font-size: 300%;
+                }
+            
+            
+            #aboutSection {
+                font-size: 20px;
+                top: 0;
+            }
+            
+            #gameOverOverlay {
+                width: 80%;
+                height: 120px;
+            }
+            
+            #gameOverOverlay h2 {
+                font-size: 25px;
+            }
+            
+            #gameOverOverlay p {
+                font-size: 18px;
+            }
+            
+            #restartButton {
+                font-size: 16px;
+            }
+            
+            #phoneMsg {
+                font-size: 22px;
+            }
+            
+            .game {
+                margin-top: 70px;
+                margin-left: 20px;
+                margin-right: 30px;
+                width: 90vw;
+            }
+            
+            #score {
+                font-size: 24px;
+            }
+
+            /*tablet message---------------------------------------------------------------------------------------------------------*/
+            #phoneMsg {
+                display: block;
+                font-family: 'VT323', monospace;
+                font-size: 20px;
+                color: red;
+                margin-top: 15px;
+                margin-left: 20px;
+                margin-right: 20px;
+                        }
+            
+                        /*----------------------------------------------------------------------------------------------------------------------*/
+        }
