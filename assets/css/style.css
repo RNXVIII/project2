@@ -318,37 +318,42 @@ nav a{
 }
     /*----------------------------------------------------------------------------------------------------------------------*/
 
-        @media only screen and (max-width: 1024px){
+        @media only screen and (min-width: 810px) and (max-width: 1024px) {
             main h1 {
                     font-size: 300%;
                 }
             
             
-            #aboutSection {
-                font-size: 20px;
-                top: 0;
+            #aboutSection{
+                margin-top: 30px;
+            }
+
+            #aboutSection p{
+                font-size: 35px;
+            }
+
+            #aboutSection h2{
+                font-size: 40px;
             }
             
             #gameOverOverlay {
                 width: 80%;
-                height: 120px;
+                height: 150px;
             }
             
             #gameOverOverlay h2 {
-                font-size: 25px;
+                font-size: 30px;
             }
             
             #gameOverOverlay p {
-                font-size: 18px;
+                font-size: 25px;
             }
             
             #restartButton {
-                font-size: 16px;
+                font-size: 25px;
+                margin: 20px
             }
             
-            #phoneMsg {
-                font-size: 22px;
-            }
             
             .game {
                 margin-top: 70px;
@@ -358,19 +363,19 @@ nav a{
             }
             
             #score {
-                font-size: 24px;
+                font-size: 70px;
             }
 
             /*tablet message---------------------------------------------------------------------------------------------------------*/
             #phoneMsg {
                 display: block;
                 font-family: 'VT323', monospace;
-                font-size: 20px;
+                font-size: 30px;
                 color: red;
                 margin-top: 15px;
-                margin-left: 20px;
-                margin-right: 20px;
+                margin-left: 30px;
+                margin-right: 30px;
                         }
             
-                        /*----------------------------------------------------------------------------------------------------------------------*/
+            /*----------------------------------------------------------------------------------------------------------------------*/
         }
